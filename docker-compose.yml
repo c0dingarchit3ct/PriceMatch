@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  scala:
+    image: mozilla/sbt
+    working_dir: /app
+    volumes:
+      - ~/.ivy2:/root/.ivy2
+      - ~/.sbt:/root/.sbt
+      - $PWD:/app
+    command: sbt run
